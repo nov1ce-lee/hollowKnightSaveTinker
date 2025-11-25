@@ -1,0 +1,3 @@
+rootProject.name = 'hollowKnightSaveTinker'
+include 'save-tinker-core'
+include 'save-tinker-cli'
