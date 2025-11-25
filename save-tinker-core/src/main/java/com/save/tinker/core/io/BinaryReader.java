@@ -3,7 +3,7 @@ package com.save.tinker.core.io;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class BinaryReader {
+public class BinaryReader implements AutoCloseable {
     private final InputStream stream;
 
     public BinaryReader(InputStream stream) {
@@ -39,5 +39,10 @@ public class BinaryReader {
             if (r == -1) throw new IOException("Unexpected end of file");
             read += r;
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        stream.close();
     }
 }
