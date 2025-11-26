@@ -1,7 +1,4 @@
-package com.save.tinker.core;
-
-import com.save.tinker.core.crypto.SaveDecryptor;
-import com.save.tinker.core.extractor.BinaryFormatterStringExtractor;
+package com.save.tinker.core.parser;
 
 import java.io.InputStream;
 

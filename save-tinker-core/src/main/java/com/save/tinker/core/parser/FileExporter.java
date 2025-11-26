@@ -1,4 +1,4 @@
-package com.save.tinker.core.export;
+package com.save.tinker.core.parser;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,7 +10,7 @@ import java.nio.file.Files;
 
 @Data
 @Builder
-public class Outfile {
+public class FileExporter {
     private String filePath;
     private String fileContent;
 

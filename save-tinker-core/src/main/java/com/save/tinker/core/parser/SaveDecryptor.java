@@ -1,4 +1,4 @@
-package com.save.tinker.core.crypto;
+package com.save.tinker.core.parser;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
