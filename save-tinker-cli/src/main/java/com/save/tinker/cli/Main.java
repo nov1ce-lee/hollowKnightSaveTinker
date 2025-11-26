@@ -1,7 +1,9 @@
 package com.save.tinker.cli;
 
+import com.save.tinker.core.analyzer.model.CompletionDegree;
 import com.save.tinker.core.parser.io.SaveLoader;
 import com.save.tinker.core.parser.io.FileExporter;
+import com.save.tinker.core.parser.transform.JsonParserUtil;
 
 import java.io.InputStream;
 import java.util.Objects;
@@ -26,7 +28,8 @@ public class Main {
                     .build();
             fileExporter.exportToJson();
 
-
+            CompletionDegree completionDegree = JsonParserUtil.parseCompletion(json);
+            System.out.println(completionDegree.getNailUpgradesCount());
         }
     }
 }

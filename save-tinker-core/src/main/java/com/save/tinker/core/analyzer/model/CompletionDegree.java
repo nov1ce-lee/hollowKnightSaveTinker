@@ -1,6 +1,5 @@
 package com.save.tinker.core.analyzer.model;
 
-import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
 @Data
@@ -35,7 +34,6 @@ public class CompletionDegree {
     private final int nailArtsMax = 3;
 
     // 骨钉升级，每次占有1%完成度，共4%
-    @SerializedName("NailSmithUpgrades")
     private int nailUpgradesCount;
     private final int nailUpgradesMax = 4;
 
@@ -77,4 +75,10 @@ public class CompletionDegree {
     // 神居
     private int godMasterCount;
     private final int godMasterMax = 5;
+
+    private void updateDegree() {
+        this.degree = equipmentsCount + spellsCount + maskShardsCount + vesselFragmentsCount + nailArtsCount
+                + nailUpgradesCount + normalBossesCount + warriorDreamsCount + charmsCount + dreamersCount
+                + dreamNailCount + foolsColosseumCount + grimmTroupeCount + lifeBloodCount + godMasterCount;
+    }
 }
