@@ -43,5 +43,10 @@ bin/
 
 ### Manual configuration ###
 /save-tinker-cli/src/main/resources/dat/
-application.properties
+
+# ====== Sensitive configs ======
+# Ignore all application.properties in all modules
 **/application.properties
+
+# DO NOT ignore example versions
+!**/application-example.properties
