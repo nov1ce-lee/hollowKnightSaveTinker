@@ -8,18 +8,18 @@ import java.io.InputStream;
 
 public class SaveLoader {
 
-    public void load(InputStream stream) {
+    public String load(InputStream stream) {
 
         try {
             String base64 = new BinaryFormatterStringExtractor().extractString(stream);
 
             SaveDecryptor decryptor = new SaveDecryptor();
-            String json = decryptor.decryptBase64ToJson(base64);
 
-            System.out.println(json);
+            return decryptor.decryptBase64ToJson(base64);
 
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
 }
