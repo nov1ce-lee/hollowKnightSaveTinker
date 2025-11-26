@@ -1,6 +1,7 @@
 package com.save.tinker.cli;
 
 import com.save.tinker.core.SaveLoader;
+import com.save.tinker.core.export.Outfile;
 
 import java.io.InputStream;
 import java.util.Objects;
@@ -19,7 +20,11 @@ public class Main {
         String json = loader.load(stream);
 
         if (Objects.nonNull(json)) {
-            System.out.println(json);
+            Outfile outfile = Outfile.builder()
+                    .fileContent(json)
+                    .filePath("output/save.json")
+                    .build();
+            outfile.exportToJson();
         }
     }
 }
