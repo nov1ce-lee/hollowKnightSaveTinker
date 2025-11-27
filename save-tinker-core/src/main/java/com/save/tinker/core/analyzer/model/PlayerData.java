@@ -30,9 +30,9 @@ public class PlayerData {
     @SerializedName("charmsOwned") private int charmsOwned;
 
     // ★ 骨钉技艺
-    @SerializedName("hasCyclone") private boolean hasCyclone;           // 强力劈砍
-    @SerializedName("hasDashSlash") private boolean hasDashSlash;       // 冲刺劈砍
-    @SerializedName("hasUpwardSlash") private boolean hasUpwardSlash;   // 旋风劈砍
+    @SerializedName("hasCyclone") private boolean hasCyclone;           // 旋风劈砍，向骨钉大师马托学习
+    @SerializedName("hasDashSlash") private boolean hasDashSlash;       // 强力劈砍，向骨钉大师席奥学习
+    @SerializedName("hasUpwardSlash") private boolean hasUpwardSlash;   // 冲刺劈砍，向骨钉大师奥罗学习
 
     // ★ 骨钉升级
     @SerializedName("nailSmithUpgrades") private int nailSmithUpgrades; // 骨钉共需升级4次
@@ -44,11 +44,16 @@ public class PlayerData {
 
     // ★ 梦之钉
     @SerializedName("hasDreamNail") private boolean hasDreamNail;           // 获得梦之钉
-    @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded;
+    @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded; // 觉醒梦之钉，1800精华
+    @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，2400精华
 
-    // 普通Boss
+    // Bosses【好难找。。】
     @SerializedName("falseKnightDefeated") private boolean falseKnightDefeated;             // 假骑士
-    @SerializedName("hornet1Defeated") private boolean hornet1Defeated;                     // 守护者大黄蜂，初见
+    @SerializedName("killedMawlek") private boolean killedMawlek;                           // 躁郁的毛里克
+    @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
+    @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
+    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士（？）
+    @SerializedName("hornet1Defeated") private boolean killedHornet;                        // 守护者大黄蜂，初见
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
@@ -66,8 +71,11 @@ public class PlayerData {
      * 内容包，游戏后续更新新增内容
      */
     // ★ 格林剧团
-    @SerializedName("killedGrimm") private boolean killedGrimm;     // 击败格林
-    @SerializedName("newDataGrimm") private boolean newDataGrimm;   // 击败梦魇之王格林
+    @SerializedName("killedGrimm") private boolean killedGrimm;                     // 击败格林团长
+    @SerializedName("killedNightmareGrimm") private boolean killedNightmareGrimm;   // 击败梦魇之王格林
+
+    // ★ 生命血（更新了蜂巢和蓝血）
+    @SerializedName("killedHiveKnight") private boolean killedHiveKnight;   // 击败蜂巢骑士
 
     // ★ 神居
     @SerializedName("hasGodfinder") private boolean hasGodfinder;                       // 获取神明调谐器
