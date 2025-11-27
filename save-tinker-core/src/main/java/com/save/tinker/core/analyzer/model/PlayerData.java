@@ -5,6 +5,9 @@ import lombok.Data;
 
 @Data
 public class PlayerData {
+    /**
+     * 主体包，游戏首发内容
+     */
     // ★ 能力，在获得装备后获取相应能力
     @SerializedName("hasDash") private boolean hasDash;                     // 冲刺，获得蛾翼披风
     @SerializedName("hasWalljump") private boolean hasWalljump;             // 攀墙跳，获得螳螂爪
@@ -23,7 +26,7 @@ public class PlayerData {
     @SerializedName("heartPieces") private int heartPieces;
     @SerializedName("vesselFragments") private int vesselFragments;
 
-    // ★ 护符
+    // ★ 护符，主体包共36个护符，后续更新内容包新增4个护符，共40个护符，5个可升级或变化的护符
     @SerializedName("charmsOwned") private int charmsOwned;
 
     // ★ 骨钉技艺
@@ -43,29 +46,38 @@ public class PlayerData {
     @SerializedName("hasDreamNail") private boolean hasDreamNail;           // 获得梦之钉
     @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded;
 
+    // 普通Boss
+    @SerializedName("falseKnightDefeated") private boolean falseKnightDefeated;             // 假骑士
+    @SerializedName("hornet1Defeated") private boolean hornet1Defeated;                     // 守护者大黄蜂，初见
+    @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
+
     // ★ 战士之梦
     @SerializedName("xeroDefeated") private int xeroDefeated;
     @SerializedName("elderHuDefeated") private int elderHuDefeated;
     @SerializedName("noEyesDefeated") private int noEyesDefeated;
     @SerializedName("galienDefeated") private int galienDefeated;
 
-    // ★ 神居
-    @SerializedName("bossDoorStateTier1") private BossDoorState bossDoorStateTier1;
-    @SerializedName("bossDoorStateTier2") private BossDoorState bossDoorStateTier2;
-    @SerializedName("bossDoorStateTier3") private BossDoorState bossDoorStateTier3;
-    @SerializedName("bossDoorStateTier4") private BossDoorState bossDoorStateTier4;
-
     // ★ 愚人斗兽场
-    @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;
-    @SerializedName("colosseumSilverCompleted") private boolean colosseumSilverCompleted;
-    @SerializedName("colosseumGoldCompleted") private boolean colosseumGoldCompleted;
+    @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;   // 勇士的试炼
+    @SerializedName("colosseumSilverCompleted") private boolean colosseumSilverCompleted;   // 征服者的试炼
+    @SerializedName("colosseumGoldCompleted") private boolean colosseumGoldCompleted;       // 愚人的试炼
 
+    /**
+     * 内容包，游戏后续更新新增内容
+     */
     // ★ 格林剧团
-    @SerializedName("nightmareLanternLit") private boolean nightmareLanternLit;
-    @SerializedName("grimmChildLevel") private int grimmChildLevel;
+    @SerializedName("killedGrimm") private boolean killedGrimm;     // 击败格林
+    @SerializedName("newDataGrimm") private boolean newDataGrimm;   // 击败梦魇之王格林
+
+    // ★ 神居
+    @SerializedName("hasGodfinder") private boolean hasGodfinder;                       // 获取神明调谐器
+    @SerializedName("bossDoorStateTier1") private BossDoorState bossDoorStateTier1;     // 大师万神殿，第一扇门连战
+    @SerializedName("bossDoorStateTier2") private BossDoorState bossDoorStateTier2;     // 艺术家万神殿，第二扇门连战
+    @SerializedName("bossDoorStateTier3") private BossDoorState bossDoorStateTier3;     // 贤者万神殿，第三扇门连战
+    @SerializedName("bossDoorStateTier4") private BossDoorState bossDoorStateTier4;     // 骑士万神殿，第四扇门连战
 
     @Data
-    public class BossDoorState {
+    public static class BossDoorState {
         @SerializedName("completed")
         private boolean completed;
 

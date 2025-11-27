@@ -10,8 +10,4 @@ public class JsonParserUtil {
     public static JsonSaveFile parse(String json) {
         return gson.fromJson(json, JsonSaveFile.class);
     }
-
-    public static CompletionDegree parseCompletion(String json) {
-        return gson.fromJson(json, CompletionDegree.class);
-    }
 }
