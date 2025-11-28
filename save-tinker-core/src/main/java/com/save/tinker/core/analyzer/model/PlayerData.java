@@ -30,8 +30,8 @@ public class PlayerData {
     @SerializedName("charmsOwned") private int charmsOwned;
 
     // ★ 骨钉技艺
-    @SerializedName("hasCyclone") private boolean hasCyclone;           // 旋风劈砍，向骨钉大师马托学习
     @SerializedName("hasDashSlash") private boolean hasDashSlash;       // 强力劈砍，向骨钉大师席奥学习
+    @SerializedName("hasCyclone") private boolean hasCyclone;           // 旋风劈砍，向骨钉大师马托学习
     @SerializedName("hasUpwardSlash") private boolean hasUpwardSlash;   // 冲刺劈砍，向骨钉大师奥罗学习
 
     // ★ 骨钉升级
@@ -57,10 +57,13 @@ public class PlayerData {
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
-    @SerializedName("xeroDefeated") private int xeroDefeated;
-    @SerializedName("elderHuDefeated") private int elderHuDefeated;
-    @SerializedName("noEyesDefeated") private int noEyesDefeated;
-    @SerializedName("galienDefeated") private int galienDefeated;
+    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（？）
+    @SerializedName("killedGhostXero") private boolean killedGhostXero;                     // 击败泽若
+    @SerializedName("killedGhostHu") private boolean killedGhostHu;                         // 击败胡长老
+    @SerializedName("killedGhostMarmu") private boolean killedGhostMarmu;                   // 击败马尔穆
+    @SerializedName("killedGhostNoEyes") private boolean killedGhostNoEyes;                 // 击败无眼
+    @SerializedName("killedGhostMarkoth") private boolean killedGhostMarkoth;               // 击败马科斯
+    @SerializedName("killedGhostGalien") private boolean killedGhostGalien;                 // 击败加利安
 
     // ★ 愚人斗兽场
     @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;   // 勇士的试炼
