@@ -48,17 +48,19 @@ public class PlayerData {
     @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，2400精华
 
     // Bosses【好难找。。】
-    @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
     @SerializedName("killedFalseKnight") private boolean killedFalseKnight;                 // 假骑士
+    @SerializedName("killedBigBuzzer") private boolean killedBigBuzzer;                     // 格鲁兹之母（这个名字好奇怪。。）
     @SerializedName("killedMawlek") private boolean killedMawlek;                           // 躁郁的毛里克
     @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
+    @SerializedName("killedMantisLord") private boolean killedMantisLord;                   // 螳螂领主，三螳螂
     @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
-    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士（？）
+    @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士（不确定和守望者骑士团的关系，修改后会影响完成度，因此不确定完成度关注的是否是打完六喜丸子）
+    @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
     @SerializedName("hornet1Defeated") private boolean killedHornet;                        // 守护者大黄蜂，初见
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
-    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为 Aladar，游戏文件中也有时这样称呼他）
+    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为Aladar，游戏文件中也有时这样称呼他）
     @SerializedName("killedGhostXero") private boolean killedGhostXero;                     // 击败泽若
     @SerializedName("killedGhostHu") private boolean killedGhostHu;                         // 击败胡长老
     @SerializedName("killedGhostMarmu") private boolean killedGhostMarmu;                   // 击败马尔穆
