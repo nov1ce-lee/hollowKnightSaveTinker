@@ -44,8 +44,8 @@ public class PlayerData {
 
     // ★ 梦之钉
     @SerializedName("hasDreamNail") private boolean hasDreamNail;           // 获得梦之钉
-    @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded; // 觉醒梦之钉，1800精华
-    @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，2400精华
+    @SerializedName("dreamNailUpgraded") private boolean dreamNailUpgraded; // 觉醒梦之钉，获得1800精华后与先知对话后觉醒
+    @SerializedName("mothDeparted") private boolean mothDeparted;           // 聆听先知的遗言，获得2400精华后与先知对话后完成，先知升天
 
     // Bosses【好难找。。】
     @SerializedName("killedFalseKnight") private boolean killedFalseKnight;                 // 假骑士
@@ -54,13 +54,14 @@ public class PlayerData {
     @SerializedName("killedJarCollector") private boolean killedJarCollector;               // 收藏家
     @SerializedName("killedMantisLord") private boolean killedMantisLord;                   // 螳螂领主，三螳螂
     @SerializedName("killedTraitorLord") private boolean killedTraitorLord;                 // 叛徒领主
+    @SerializedName("killedMageLord") private boolean killedMageLord;                       // 灵魂大师
     @SerializedName("killedBlackKnight") private boolean killedBlackKnight;                 // 守望者骑士（不确定和守望者骑士团的关系，修改后会影响完成度，因此不确定完成度关注的是否是打完六喜丸子）
     @SerializedName("killedDungDefender") private boolean killedDungDefender;               // 粪虫防御者
     @SerializedName("hornet1Defeated") private boolean killedHornet;                        // 守护者大黄蜂，初见
     @SerializedName("hornetOutskirtsDefeated") private boolean hornetOutskirtsDefeated;     // 岗哨大黄蜂，再战
 
     // ★ 战士之梦
-    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为Aladar，游戏文件中也有时这样称呼他）
+    @SerializedName("killedGhostAladar") private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为Aladar，游戏文件中也有时这样称呼他，真难找啊hhhh）
     @SerializedName("killedGhostXero") private boolean killedGhostXero;                     // 击败泽若
     @SerializedName("killedGhostHu") private boolean killedGhostHu;                         // 击败胡长老
     @SerializedName("killedGhostMarmu") private boolean killedGhostMarmu;                   // 击败马尔穆
@@ -69,9 +70,9 @@ public class PlayerData {
     @SerializedName("killedGhostGalien") private boolean killedGhostGalien;                 // 击败加利安
 
     // ★ 愚人斗兽场
-    @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;   // 勇士的试炼
-    @SerializedName("colosseumSilverCompleted") private boolean colosseumSilverCompleted;   // 征服者的试炼
-    @SerializedName("colosseumGoldCompleted") private boolean colosseumGoldCompleted;       // 愚人的试炼
+    @SerializedName("colosseumBronzeCompleted") private boolean colosseumBronzeCompleted;   // 勇士的试炼（竞技场1）
+    @SerializedName("colosseumSilverCompleted") private boolean colosseumSilverCompleted;   // 征服者的试炼（竞技场2）
+    @SerializedName("colosseumGoldCompleted") private boolean colosseumGoldCompleted;       // 愚人的试炼（竞技场3）
 
     /**
      * 内容包，游戏后续更新新增内容
