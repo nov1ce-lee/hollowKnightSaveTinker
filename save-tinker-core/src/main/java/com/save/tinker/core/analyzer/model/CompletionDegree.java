@@ -1,8 +1,14 @@
 package com.save.tinker.core.analyzer.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
+@NoArgsConstructor
 public class CompletionDegree {
     /**
      * 完成度，主体完成度上限为100%，加入内容包后完成度上限上升至112%
@@ -16,10 +22,12 @@ public class CompletionDegree {
     // 装备，对应能力，每个占有2%完成度，共14%
     private int equipmentsCount;
     private final int equipmentsMax = 14;
+    private final String[] equipments = {"hasDash", "hasWalljump", "hasDoubleJump", "hasSuperDash", "hasShadowDash", "hasAcidArmour", "hasCrystalHeart"};
 
     // 法术，每个占有1%完成度，共6%
     private int spellsCount;
     private final int spellsMax = 6;
+    private final String[] spells = {"fireballLevel", "screamLevel", "quakeLevel"};
 
     // 远古面具，每个占有1%完成度，共4%
     private int maskShardsCount;
@@ -80,5 +88,21 @@ public class CompletionDegree {
         this.degree = equipmentsCount + spellsCount + maskShardsCount + vesselFragmentsCount + nailArtsCount
                 + nailUpgradesCount + normalBossesCount + warriorDreamsCount + charmsCount + dreamersCount
                 + dreamNailCount + foolsColosseumCount + grimmTroupeCount + lifeBloodCount + godMasterCount;
+    }
+
+    public CompletionDegree parseFromPlayerData(PlayerData playerData) {
+
+        return null;
+    }
+
+    public static Object getFieldValue(Object obj, String fieldName) {
+        try {
+            Field field = obj.getClass().getDeclaredField(fieldName);
+            field.setAccessible(true);
+            return field.get(obj);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
