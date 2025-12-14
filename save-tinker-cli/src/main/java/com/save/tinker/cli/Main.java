@@ -40,10 +40,10 @@ public class Main {
             try {
                 JsonSaveFile jsonSaveFile = objectMapper.readValue(json, JsonSaveFile.class);
                 PlayerData playerData = jsonSaveFile.getPlayerData();
-                Bosses  bosses = playerData.getBosses();
+                Bosses bosses = playerData.getBosses();
                 System.out.println("bosses: " + bosses);
-                System.out.println("bosses defeated: " + bosses.getBossDefeated());
-                System.out.println("bosses undefeated: " + bosses.getBossNotDefeated());
+                System.out.println("bosses defeated: " + bosses.getTrueList());
+                System.out.println("bosses undefeated: " + bosses.getFalseList());
 
             } catch (IOException e) {
                 throw new RuntimeException(e);

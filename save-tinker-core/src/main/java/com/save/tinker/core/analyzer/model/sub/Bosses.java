@@ -1,14 +1,15 @@
 package com.save.tinker.core.analyzer.model.sub;
 
+import com.save.tinker.core.analyzer.model.Abstract;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class Bosses {
+public class Bosses extends Abstract {
 
     /*
      * Bosses，每个占有1%完成度，共14%
@@ -29,7 +30,8 @@ public class Bosses {
     private boolean hornet1Defeated;                   // 守护者大黄蜂，初见
     private boolean hornetOutskirtsDefeated;           // 岗哨大黄蜂，再战
 
-    public Map<String, Boolean> getBosses() {
+    @Override
+    public Map<String, Boolean> getMap() {
         Map<String, Boolean> bosses = new HashMap<>();
         bosses.put("killedFalseKnight", killedFalseKnight);
         bosses.put("killedBigFly", killedBigFly);
@@ -48,8 +50,9 @@ public class Bosses {
         return bosses;
     }
 
-    public String getBossName(String boss) {
-        switch (boss) {
+    @Override
+    public String getName(String key) {
+        switch (key) {
             case "killedFalseKnight":
                 return "假骑士";
             case "killedBigFly":
@@ -81,25 +84,5 @@ public class Bosses {
             default:
                 return "";
         }
-    }
-
-    public List<String> getBossDefeated() {
-        List<String> bosses = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getBosses().entrySet()) {
-            if (entry.getValue()) {
-                bosses.add(getBossName(entry.getKey()));
-            }
-        }
-        return bosses;
-    }
-
-    public List<String> getBossNotDefeated() {
-        List<String> bosses = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getBosses().entrySet()) {
-            if (!entry.getValue()) {
-                bosses.add(getBossName(entry.getKey()));
-            }
-        }
-        return bosses;
     }
 }

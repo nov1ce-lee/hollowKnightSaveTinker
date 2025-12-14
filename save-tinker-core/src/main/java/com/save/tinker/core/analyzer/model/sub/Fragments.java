@@ -1,6 +1,5 @@
 package com.save.tinker.core.analyzer.model.sub;
 
-import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
 @Data
