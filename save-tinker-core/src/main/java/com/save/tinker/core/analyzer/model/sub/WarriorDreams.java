@@ -1,14 +1,20 @@
 package com.save.tinker.core.analyzer.model.sub;
 
+import com.save.tinker.core.analyzer.model.Abstract;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class WarriorDreams {
+public class WarriorDreams extends Abstract {
+
+    /*
+     * 战士之梦，每个占有1%完成度，共7%
+     */
+
     private boolean killedGhostAladar;                 // 击败戈布（戈布曾以其支持者的名字命名为Aladar，游戏文件中也有时这样称呼他）
     private boolean killedGhostXero;                   // 击败泽若
     private boolean killedGhostHu;                     // 击败胡长老
@@ -17,6 +23,7 @@ public class WarriorDreams {
     private boolean killedGhostMarkoth;                // 击败马科斯
     private boolean killedGhostGalien;                 // 击败加利安
 
+    @Override
     public Map<String, Boolean> getMap() {
         Map<String, Boolean> map = new HashMap<>();
         map.put("killedGhostAladar", killedGhostAladar);
@@ -29,6 +36,7 @@ public class WarriorDreams {
         return map;
     }
 
+    @Override
     public String getName(String key) {
         switch (key) {
             case "killedGhostAladar":
@@ -50,23 +58,8 @@ public class WarriorDreams {
         }
     }
 
-    public List<String> getKilled() {
-        List<String> list = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getMap().entrySet()) {
-            if (entry.getValue()) {
-                list.add(getName(entry.getKey()));
-            }
-        }
-        return list;
-    }
-
-    public List<String> getUnkilled() {
-        List<String> list = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getMap().entrySet()) {
-            if (!entry.getValue()) {
-                list.add(getName(entry.getKey()));
-            }
-        }
-        return list;
+    @Override
+    public int getValue() {
+        return 1;
     }
 }

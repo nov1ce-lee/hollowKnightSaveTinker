@@ -3,13 +3,15 @@ package com.save.tinker.core.analyzer.model;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.save.tinker.core.analyzer.model.sub.Bosses;
 import com.save.tinker.core.analyzer.model.sub.Charms;
+import com.save.tinker.core.analyzer.model.sub.DreamNail;
 import com.save.tinker.core.analyzer.model.sub.FoolsColosseum;
 import com.save.tinker.core.analyzer.model.sub.GrimAndHive;
-import com.save.tinker.core.analyzer.model.sub.NailAbout;
 import com.save.tinker.core.analyzer.model.sub.Dreamers;
 import com.save.tinker.core.analyzer.model.sub.Equipments;
 import com.save.tinker.core.analyzer.model.sub.Fragments;
 import com.save.tinker.core.analyzer.model.sub.GodHome;
+import com.save.tinker.core.analyzer.model.sub.NailArts;
+import com.save.tinker.core.analyzer.model.sub.NailUpgrades;
 import com.save.tinker.core.analyzer.model.sub.Spells;
 import com.save.tinker.core.analyzer.model.sub.WarriorDreams;
 import lombok.Data;
@@ -35,7 +37,13 @@ public class PlayerData {
     private Dreamers dreamers;          // ★ 守梦者
 
     @JsonUnwrapped
-    private NailAbout nailAbout;        // ★ 骨钉等级，骨钉技艺和梦之钉
+    private DreamNail dreamNail;       // ★ 梦之钉
+
+    @JsonUnwrapped
+    private NailArts nailArts;          // ★ 骨钉技艺
+
+    @JsonUnwrapped
+    private NailUpgrades nailUpgrades;  // ★ 骨钉升级
 
     @JsonUnwrapped
     private Bosses bosses;

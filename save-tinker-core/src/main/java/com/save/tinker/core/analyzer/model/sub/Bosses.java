@@ -85,4 +85,9 @@ public class Bosses extends Abstract {
                 return "";
         }
     }
+
+    @Override
+    public int getValue() {
+        return 1;
+    }
 }

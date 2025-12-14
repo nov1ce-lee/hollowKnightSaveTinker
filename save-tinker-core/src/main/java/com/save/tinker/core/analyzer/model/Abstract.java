@@ -12,6 +12,8 @@ public abstract class Abstract {
 
     public abstract String getName(String key);
 
+    public abstract int getValue();
+
     public List<String> getTrueList() {
         List<String> list = new ArrayList<>();
         for (Map.Entry<String, Boolean> entry : getMap().entrySet()) {
@@ -33,6 +35,6 @@ public abstract class Abstract {
     }
 
     public int getCompletedCount() {
-        return (int) getMap().values().stream().filter(v -> v).count();
+        return getTrueList().size() * getValue();
     }
 }

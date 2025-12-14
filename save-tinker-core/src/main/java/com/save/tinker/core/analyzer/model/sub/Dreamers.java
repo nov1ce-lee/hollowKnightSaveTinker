@@ -1,22 +1,26 @@
 package com.save.tinker.core.analyzer.model.sub;
 
+import com.save.tinker.core.analyzer.model.Abstract;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class Dreamers {
+public class Dreamers extends Abstract {
+
     /*
-     * 守梦者
+     * 守梦者，每个占有1%完成度，共3%
      */
+
     private boolean lurienDefeated;     // 守望者卢瑞恩
     private boolean monomonDefeated;    // 教师莫诺蒙
     private boolean hegemolDefeated;    // 野兽赫拉
 
-    public Map<String, Boolean> getDreamers() {
+    @Override
+    public Map<String, Boolean> getMap() {
         Map<String, Boolean> dreamers = new HashMap<>();
         dreamers.put("lurienDefeated", lurienDefeated);
         dreamers.put("monomonDefeated", monomonDefeated);
@@ -37,23 +41,8 @@ public class Dreamers {
         }
     }
 
-    public List<String> getDreamersDefeated() {
-        List<String> dreamersDefeated = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getDreamers().entrySet()) {
-            if (entry.getValue()) {
-                dreamersDefeated.add(getName(entry.getKey()));
-            }
-        }
-        return dreamersDefeated;
-    }
-
-    public List<String> getDreamersUndefeated() {
-        List<String> dreamersUndefeated = new ArrayList<>();
-        for (Map.Entry<String, Boolean> entry : getDreamers().entrySet()) {
-            if (!entry.getValue()) {
-                dreamersUndefeated.add(getName(entry.getKey()));
-            }
-        }
-        return dreamersUndefeated;
+    @Override
+    public int getValue() {
+        return 1;
     }
 }
