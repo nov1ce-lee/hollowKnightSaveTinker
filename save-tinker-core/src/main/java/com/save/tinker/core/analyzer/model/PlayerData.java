@@ -8,11 +8,12 @@ import com.save.tinker.core.analyzer.model.sub.FoolsColosseum;
 import com.save.tinker.core.analyzer.model.sub.GrimAndHive;
 import com.save.tinker.core.analyzer.model.sub.Dreamers;
 import com.save.tinker.core.analyzer.model.sub.Equipments;
-import com.save.tinker.core.analyzer.model.sub.Fragments;
 import com.save.tinker.core.analyzer.model.sub.GodHome;
+import com.save.tinker.core.analyzer.model.sub.MaskFragments;
 import com.save.tinker.core.analyzer.model.sub.NailArts;
 import com.save.tinker.core.analyzer.model.sub.NailUpgrades;
 import com.save.tinker.core.analyzer.model.sub.Spells;
+import com.save.tinker.core.analyzer.model.sub.VesselFragments;
 import com.save.tinker.core.analyzer.model.sub.WarriorDreams;
 import lombok.Data;
 
@@ -22,13 +23,16 @@ public class PlayerData {
      * 主体包，游戏首发内容
      */
     @JsonUnwrapped
-    private Equipments equipments;      // ★ 能力，在获得装备后获取相应能力
+    private Equipments equipments;              // ★ 装备
 
     @JsonUnwrapped
-    private Spells spells;              // ★ 法术
+    private Spells spells;                      // ★ 法术
 
     @JsonUnwrapped
-    private Fragments fragments;        // ★ 面具碎片 / 容器碎片
+    private MaskFragments maskFragments;        // ★ 面具碎片
+
+    @JsonUnwrapped
+    private VesselFragments vesselFragments;    // ★ 容器碎片
 
     @JsonUnwrapped
     private Charms charms;              // ★ 护符
@@ -37,7 +41,7 @@ public class PlayerData {
     private Dreamers dreamers;          // ★ 守梦者
 
     @JsonUnwrapped
-    private DreamNail dreamNail;       // ★ 梦之钉
+    private DreamNail dreamNail;        // ★ 梦之钉
 
     @JsonUnwrapped
     private NailArts nailArts;          // ★ 骨钉技艺

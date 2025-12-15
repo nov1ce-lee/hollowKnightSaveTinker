@@ -9,10 +9,10 @@ import java.util.Map;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Fragments extends Abstract {
+public class MaskFragments extends Abstract {
 
     /*
-     * 面具碎片 / 容器碎片，每1个完整的面具或容器占1%完成度，面具4个，容器3个，共7%
+     * 面具碎片，每1个完整的面具占1%完成度，共4%
      */
 
     // 当前拥有的碎片数量
@@ -29,18 +29,9 @@ public class Fragments extends Abstract {
     private boolean slyShellFrag3;  // 800吉欧，拿到斯莱的地下室钥匙后
     private boolean slyShellFrag4;  // 1500吉欧，同上
 
-    /*
-     * 容器碎片
-     */
+    // 解救5只毛毛虫后虫爷爷奖励
+    private int grubRewards;
 
-    // 斯莱商店
-    private boolean slyVesselFrag1;
-    private boolean slyVesselFrag2;
-    private boolean slyVesselFrag3;
-    private boolean slyVesselFrag4;
-
-    // 深巢右下角
-    private boolean vesselFragStagNest;
 
     @Override
     public Map<String, Boolean> getMap() {
