@@ -39,6 +39,9 @@ public class Fragments extends Abstract {
     private boolean slyVesselFrag3;
     private boolean slyVesselFrag4;
 
+    // 深巢右下角
+    private boolean vesselFragStagNest;
+
     @Override
     public Map<String, Boolean> getMap() {
         return Collections.emptyMap();
