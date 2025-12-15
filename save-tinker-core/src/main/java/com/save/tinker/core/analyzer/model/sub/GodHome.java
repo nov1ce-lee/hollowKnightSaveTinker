@@ -10,9 +10,11 @@ import java.util.Map;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class GodHome extends Abstract {
+
     /*
      * 神居，每个占有1%完成度，共5%
      */
+
     private boolean hasGodfinder;                 // 获取神明调谐器
     private BossDoorState bossDoorStateTier1;     // 大师万神殿，第一扇门连战
     private BossDoorState bossDoorStateTier2;     // 艺术家万神殿，第二扇门连战

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.save.tinker.core.analyzer.model.JsonSaveFile;
 import com.save.tinker.core.analyzer.model.PlayerData;
+import com.save.tinker.core.analyzer.model.sub.Charms;
 import com.save.tinker.core.analyzer.model.sub.Equipments;
 import com.save.tinker.core.parser.io.SaveLoader;
 import com.save.tinker.core.parser.io.FileExporter;
@@ -38,10 +39,11 @@ public class Main {
             try {
                 JsonSaveFile jsonSaveFile = objectMapper.readValue(json, JsonSaveFile.class);
                 PlayerData playerData = jsonSaveFile.getPlayerData();
-                Equipments equipments = playerData.getEquipments();
-                System.out.println("equipments: " + equipments);
-                System.out.println("equipments got: " + equipments.getTrueList());
-                System.out.println("equipments not got: " + equipments.getFalseList());
+                Charms charms = playerData.getCharms();
+                System.out.println("charms: " + charms);
+                System.out.println("charms map: " + charms.getMap());
+                System.out.println("charms got: " + charms.getTrueList());
+                System.out.println("charms not got: " + charms.getFalseList());
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
