@@ -11,15 +11,15 @@ public class VesselFragments extends Abstract {
      * 容器碎片，每1个完整的容器占1%完成度，共3%
      */
 
+    // 当前拥有的碎片数量
+    private int vesselFragments;
+
     // 斯莱商店
     private boolean slyVesselFrag1;         // 550吉欧
     private boolean slyVesselFrag2;         // 900吉欧，需要店主的钥匙
 
     // 深巢右下角
     private boolean vesselFragStagNest;
-
-    // 灰色哀悼者送花任务奖励
-    private boolean xunRewardGiven;
 
     // 古老盆地喷泉投3000吉欧奖励
     private boolean fountainVesselSummoned;

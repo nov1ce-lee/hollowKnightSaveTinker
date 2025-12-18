@@ -17,11 +17,7 @@ public class MaskFragments extends Abstract {
 
     // 当前拥有的碎片数量
     private int heartPieces;
-    private int vesselFragments;
-
-    /*
-     * 面具碎片
-     */
+    private int maxHealthBase;
 
     // 斯莱商店
     private boolean slyShellFrag1;  // 150吉欧
@@ -31,6 +27,9 @@ public class MaskFragments extends Abstract {
 
     // 解救5只毛毛虫后虫爷爷奖励
     private int grubRewards;
+
+    // 灰色哀悼者送花任务奖励
+    private boolean xunRewardGiven;
 
 
     @Override
